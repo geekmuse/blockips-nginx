@@ -26,10 +26,10 @@ if(scalar(@ip_list) > 0){
 		system("/bin/cp $tmp_file $nginx_conffile");
 		my $reload_exit=&nginx_reload;
 		if($reload_exit){
-			&git_commit;
+			# &git_commit;
 		}
 		else{
-			&git_revert($nginx_conffile);
+			# &git_revert($nginx_conffile);
 			&nginx_reload;
 		}
 	}
